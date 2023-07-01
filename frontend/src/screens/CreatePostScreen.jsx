@@ -68,7 +68,7 @@ const CreatePostScreen = () => {
           onSubmit={submitHandler}
         >
           <div className="flex flex-col px-2 py-2 gap-2 text-white rounded-xl bg-gradient-to-r from-black/80 to-black/80 backdrop-blur-lg">
-            <div className="px-3 py-3 flex gap-3 justify-between">
+            <div className="px-3 py-3 flex gap-3 ">
               <img
                 className="h-[45px] object-cover cover w-[45px] rounded-full shadow-sm"
                 src={userInfo.dp}
@@ -79,7 +79,7 @@ const CreatePostScreen = () => {
                 type="text"
                 defaultValue={caption}
                 placeholder="Write a caption..."
-                className="bg-transparent flex-1 bg-gradient-to-l from-[#98EECC]/70 to-[#98EECC]/70 backdrop-blur-lg rounded-md px-2 py-1 placeholder:text-white/80 focus:outline-none"
+                className="bg-transparent flex-1 w-[20%] bg-gradient-to-l from-[#98EECC]/70 to-[#98EECC]/70 backdrop-blur-lg rounded-md px-2 py-1 placeholder:text-white/80 focus:outline-none"
                 onChange={(e) => setCaption(e.target.value)}
               />
             </div>
