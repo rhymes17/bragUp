@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, "frontend/dist")));
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 
-app.use(notFound);
+// app.use(notFound);
 app.use(errorHandler);
 // Handle other routes or API endpoints here
 
