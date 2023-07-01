@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,200;0,300;0,400;1,300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* background-color: black; */
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}
+
+.ani {
+  transition: all 0.3s ease-in-out;
+}
+
+.image-container {
+  position: relative;
+}
+
+.box-shadow-container {
+  box-shadow: 2px 2px 20px 0px var(--box-shadow-color, #000);
+  overflow: hidden;
+  display: inline-block;
+}
+
+.box-shadow-container img {
+  display: block;
+}
+
+.liked .heart-icon {
+  animation: heartBeat 0.8s ease-in-out;
+}
+
+.con {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.2);
+  }
+  20% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
