@@ -219,10 +219,10 @@ const PostScreen = () => {
               key={comment._id}
               className="flex gap-2 justify-between bg-gradient-to-l my-2 from-white/10 to-white/10 px-2 py-1 rounded-lg"
             >
-              <div className="flex gap-3 max-w-[85%]">
+              <div className="flex gap-3 md:max-w-[85%]">
                 <div className="flex gap-2 min-w-[35%]">
                   <img
-                    className="h-[45px] object-cover cover w-[45px] rounded-full shadow-sm"
+                    className="h-[35px]  md:block object-cover cover w-[35px] rounded-full shadow-sm"
                     src={comment.user.dp}
                     alt="profilePicture"
                   />
@@ -236,15 +236,17 @@ const PostScreen = () => {
                 <p className="font-[300] text-white/90 ">{comment.message}</p>
               </div>
 
-              {getDaysAgo(comment.createdAt) > 0 ? (
-                <p className="font-[300] text-sm text-white/50">
-                  {getDaysAgo(comment.createdAt)} h
-                </p>
-              ) : (
-                <p className="font-[300] text-sm text-white/50">
-                  {getHoursAgo(comment.createdAt)} h
-                </p>
-              )}
+              <div className="hidden md:block">
+                {getDaysAgo(comment.createdAt) > 0 ? (
+                  <p className="font-[300] text-sm text-white/50">
+                    {getDaysAgo(comment.createdAt)} h
+                  </p>
+                ) : (
+                  <p className="font-[300] text-sm text-white/50">
+                    {getHoursAgo(comment.createdAt)} h
+                  </p>
+                )}
+              </div>
             </div>
           ))}
       </div>
@@ -255,7 +257,7 @@ const PostScreen = () => {
       >
         <input
           required
-          className="bg-transparent placeholder:text-white/90 flex-1 focus:outline-none placeholder:font-[300]"
+          className="bg-transparent placeholder:text-white/90 flex-1 focus:outline-none placeholder:font-[300] w-[70%] "
           placeholder="Type to add a comment..."
           defaultValue={message}
           onChange={(e) => setMessage(e.target.value)}

@@ -79,7 +79,7 @@ const CreatePostScreen = () => {
                 type="text"
                 defaultValue={caption}
                 placeholder="Write a caption..."
-                className="bg-transparent flex-1 w-[20%] bg-gradient-to-l from-[#98EECC]/70 to-[#98EECC]/70 backdrop-blur-lg rounded-md px-2 py-1 placeholder:text-white/80 focus:outline-none"
+                className="bg-transparent flex-1 w-[20%]  bg-gradient-to-l from-[#98EECC]/70 to-[#98EECC]/70 backdrop-blur-lg rounded-md px-2 py-1 placeholder:text-white/80 focus:outline-none"
                 onChange={(e) => setCaption(e.target.value)}
               />
             </div>
@@ -112,6 +112,7 @@ const CreatePostScreen = () => {
             hidden
             type="file"
             id="imgInput"
+            accept="image/*"
             onChange={handleImageUpload}
           />
           <label
